@@ -1222,11 +1222,13 @@ body.menu-open { overflow: hidden; }
   overflow: hidden;
   border-radius: 4px;
 }
-.proj-video-wrap video {
+.proj-video-wrap video,
+.proj-video-wrap iframe {
   width: 100%;
   height: 100%;
   object-fit: contain;
   display: block;
+  border: none;
 }
 /* Social Ads Grid — 3 vertikale Videos nebeneinander */
 .proj-ads-grid {
@@ -1242,11 +1244,13 @@ body.menu-open { overflow: hidden; }
   overflow: hidden;
 }
 
-.proj-ads-item video {
+.proj-ads-item video,
+.proj-ads-item iframe {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  border: none;
 }
 
 @media (max-width: 720px) {
