@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jamespocher.vercel.app/sitemap.xml
