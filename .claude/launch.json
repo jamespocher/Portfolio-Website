@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "ruby-httpd",
+      "runtimeExecutable": "ruby",
+      "runtimeArgs": ["-run", "-e", "httpd", ".", "-p", "8000"],
+      "port": 8000
+    },
+    {
+      "name": "python-http",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-c", "import os; os.chdir('/Users/JamesPocher/Desktop/PortfolioWebsite_James'); from http.server import HTTPServer, SimpleHTTPRequestHandler; HTTPServer(('127.0.0.1', 8000), SimpleHTTPRequestHandler).serve_forever()"],
+      "port": 8000
+    }
+  ]
+}

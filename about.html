@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Über mich — James Pocher</title>
+<meta name="description" content="Ich bin James Pocher, Mediamatiker aus Bern. Erfahre mehr über meinen Weg, meine Arbeitsweise und was mich antreibt." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700;1,800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+<style>
+
+  /* ── Page-specific layout ── */
+  .about-page {
+    padding-top: clamp(140px, 18vh, 200px);
+  }
+
+  /* Hero */
+  .about-hero {
+    border-bottom: 1px solid var(--line);
+    padding: 0 var(--gutter) clamp(60px, 8vw, 120px);
+    max-width: var(--maxw);
+    margin: 0 auto;
+  }
+
+  .about-hero__meta {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--fg-soft);
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: clamp(48px, 8vw, 90px);
+  }
+
+  .about-hero__title {
+    font-family: var(--font-display);
+    font-size: clamp(72px, 14vw, 220px);
+    font-weight: 900;
+    line-height: 0.88;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+  }
+
+  .about-hero__title em {
+    font-style: italic;
+    color: var(--accent-orange);
+  }
+
+  /* Portrait — image left, text right */
+  .about-portrait-wrap {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: clamp(60px, 8vw, 120px) var(--gutter);
+    border-bottom: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 6vw, 100px);
+    align-items: start;
+  }
+
+  .about-portrait-left {
+    position: relative;
+  }
+
+  .about-portrait {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center 15%;
+    border-radius: 14px;
+    display: block;
+    box-shadow: 0 16px 48px rgba(0,0,0,0.12), 0 4px 14px rgba(0,0,0,0.07);
+  }
+
+  html[data-theme="dark"] .about-portrait {
+    box-shadow: 0 16px 48px rgba(0,0,0,0.4), 0 4px 14px rgba(0,0,0,0.25);
+  }
+
+  .about-portrait-text {
+    padding-top: 0;
+  }
+
+  .about-portrait-text p {
+    font-size: clamp(16px, 1.4vw, 20px);
+    line-height: 1.7;
+    color: var(--fg-soft);
+    margin-bottom: 28px;
+  }
+
+  .about-portrait-text p:last-child { margin-bottom: 0; }
+
+  .about-portrait-text strong {
+    color: var(--fg);
+    font-weight: 500;
+  }
+
+  @media (max-width: 860px) {
+    .about-portrait-wrap {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    .about-portrait {
+      aspect-ratio: 4 / 3;
+    }
+  }
+
+
+/* Skills */
+  .about-skills {
+    padding: clamp(60px, 10vw, 140px) var(--gutter);
+    max-width: var(--maxw);
+    margin: 0 auto;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .about-skills__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--line);
+    margin-top: clamp(48px, 8vw, 100px);
+  }
+
+  .about-skills__col {
+    padding: clamp(28px, 3.5vw, 52px);
+    border-right: 1px solid var(--line);
+  }
+
+  .about-skills__col:first-child { padding-left: 0; }
+  .about-skills__col:last-child { border-right: none; padding-right: 0; }
+
+  .about-skills__col-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent-orange);
+    display: block;
+    margin-bottom: 28px;
+  }
+
+  .about-skills__col-title {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 3vw, 44px);
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 0.95;
+    margin-bottom: 20px;
+  }
+
+  .about-skills__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .about-skills__list li {
+    font-size: 14px;
+    color: var(--fg-soft);
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .about-skills__list li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--accent-orange);
+  }
+
+  /* Timeline */
+  .about-timeline {
+    padding: clamp(60px, 10vw, 140px) var(--gutter);
+    max-width: var(--maxw);
+    margin: 0 auto;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .about-timeline__list {
+    border-top: 1px solid var(--line);
+    margin-top: clamp(48px, 8vw, 100px);
+  }
+
+  .about-timeline__item {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: clamp(24px, 4vw, 60px);
+    padding: clamp(24px, 3vw, 44px) 0;
+    border-bottom: 1px solid var(--line);
+    align-items: start;
+  }
+
+  .about-timeline__year {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--fg-soft);
+    padding-top: 6px;
+  }
+
+  .about-timeline__role {
+    font-family: var(--font-display);
+    font-size: clamp(24px, 2.5vw, 38px);
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+
+  .about-timeline__place {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent-orange);
+    margin-bottom: 14px;
+  }
+
+  .about-timeline__desc {
+    font-size: 15px;
+    color: var(--fg-soft);
+    line-height: 1.6;
+    max-width: 560px;
+  }
+
+  /* Values */
+  .about-values {
+    padding: clamp(60px, 10vw, 140px) var(--gutter);
+    max-width: var(--maxw);
+    margin: 0 auto;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .about-values__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(20px, 3vw, 40px);
+    margin-top: clamp(48px, 8vw, 100px);
+  }
+
+  .about-values__card {
+    border: 1px solid var(--line);
+    padding: clamp(28px, 3.5vw, 52px);
+  }
+
+  .about-values__num {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--accent-orange);
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .about-values__card h3 {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 3vw, 44px);
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 0.95;
+    margin-bottom: 16px;
+  }
+
+  .about-values__card p {
+    font-size: 15px;
+    color: var(--fg-soft);
+    line-height: 1.65;
+  }
+
+  /* CTA back to portfolio */
+  .about-cta {
+    padding: clamp(80px, 12vw, 160px) var(--gutter);
+    max-width: var(--maxw);
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .about-cta__label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--fg-soft);
+    display: block;
+    margin-bottom: 32px;
+  }
+
+  .about-cta__link {
+    font-family: var(--font-display);
+    font-size: clamp(52px, 10vw, 150px);
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 0.9;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 8px;
+    letter-spacing: 0.01em;
+  }
+
+  .about-cta__link::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 100%;
+    bottom: 0;
+    height: 2px;
+    background: var(--fg);
+    transition: right 0.7s var(--ease);
+  }
+
+  .about-cta__link:hover::after { right: 0; }
+
+  /* Responsive */
+  @media (max-width: 860px) {
+.about-skills__grid { grid-template-columns: 1fr; }
+    .about-skills__col { border-right: none; border-bottom: 1px solid var(--line); padding: 32px 0; }
+    .about-skills__col:last-child { border-bottom: none; }
+    .about-timeline__item { grid-template-columns: 1fr; gap: 8px; }
+    .about-values__grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- Grain overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Scroll progress -->
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"><span class="cursor__label">Ansehen</span></div>
+
+  <!-- Header / Navigation -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html" class="logo" aria-label="Zurück zur Startseite">
+        <img src="fotos/JamesPocher_Wortmarke.png" alt="James Pocher" class="logo__mark" />
+        <span class="logo__meta">Mediamatiker<br/>© 2026</span>
+      </a>
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a href="index.html#work"><span class="nav__num">01</span>Work</a>
+        <a href="index.html#services"><span class="nav__num">02</span>Services</a>
+        <a href="about.html" aria-current="page"><span class="nav__num">03</span>About</a>
+        <a href="index.html#contact"><span class="nav__num">04</span>Contact</a>
+      </nav>
+      <div class="header__right">
+        <span class="clock" id="clock">CH —:—</span>
+        <button class="theme-toggle" id="themeToggle" aria-label="Theme wechseln">
+          <span class="theme-toggle__icon">◑</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Navigation öffnen" aria-expanded="false">
+          <span class="menu-toggle__text">Menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <div class="mobile-nav__inner">
+      <nav class="mobile-nav__list">
+        <a href="index.html#work" class="mobile-nav__item">
+          <span class="mobile-nav__num">01</span>
+          <span class="mobile-nav__label">Work</span>
+        </a>
+        <a href="index.html#services" class="mobile-nav__item">
+          <span class="mobile-nav__num">02</span>
+          <span class="mobile-nav__label">Services</span>
+        </a>
+        <a href="about.html" class="mobile-nav__item">
+          <span class="mobile-nav__num">03</span>
+          <span class="mobile-nav__label">About</span>
+        </a>
+        <a href="index.html#contact" class="mobile-nav__item">
+          <span class="mobile-nav__num">04</span>
+          <span class="mobile-nav__label">Contact</span>
+        </a>
+      </nav>
+      <div class="mobile-nav__footer">
+        <span>© 2026 James</span>
+        <span>Switzerland</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="about-page" id="top">
+
+    <!-- Hero -->
+    <section class="about-hero">
+      <div class="about-hero__meta">
+        <span>Über mich — Mediamatiker</span>
+        <span>Bern, Switzerland</span>
+      </div>
+      <h1 class="about-hero__title">
+        <span class="reveal"><span>Ich bin</span></span>
+        <span class="reveal"><span>James <em>Pocher.</em></span></span>
+      </h1>
+    </section>
+
+    <!-- Portrait + Intro -->
+    <div class="about-portrait-wrap">
+      <div class="about-portrait-left">
+        <img src="fotos/James-Portrait.JPG" alt="James Pocher Portrait" class="about-portrait" />
+      </div>
+      <div class="about-portrait-text">
+        <p>
+          Hoi zämme, ich bin <strong>James Pocher</strong> — aufgewachsen in Bellach im Kanton Solothurn, alles fing im Zeichenunterricht in der Schule an. Schon damals 
+          habe ich mich in Designs, visuelle Konzepte und die kreative Freiheit verliebt. Bei der Lehrstellensuche sagte mir mein Bauchgefühl immer, dass Mediamatiker genau das richtige für mich ist. 
+          Somit begann mein Weg vor vier Jahren bei der BiCT AG in Ostermundigen. Meine Skills und meine Person führten mich in der zweiten Phase meiner Lehre dann weiter zum Bundesamt für Energie in Ittigen. 
+        </p>
+        <p>
+          Als <strong>Mediamatiker</strong> bewege ich mich täglich an der Schnittstelle von Kreativität und Strategie:
+          Ich produziere Videos, gestalte Layouts, entwickle Markenwelten und erzähle Geschichten,
+          die bleiben.
+        </p>
+        <p>
+          Mein Anspruch ist es, <strong>moderne Ästhetik mit klarer Kommunikation</strong> zu verbinden —
+          ruhig, präzise, mit einem Auge für Details, die man erst auf den zweiten Blick entdeckt.
+          Für mich beginnt gutes Handwerk nicht vor der Kamera oder am Bildschirm —
+          es beginnt mit dem richtigen Zuhören.
+        </p>
+      </div>
+    </div>
+
+    <!-- Skills -->
+    <section class="about-skills">
+      <div class="section-head">
+        <span class="section-head__num">02</span>
+        <span class="section-head__label">Was ich kann</span>
+      </div>
+
+      <div class="about-skills__grid">
+        <div class="about-skills__col">
+          <span class="about-skills__col-label">Bild & Video</span>
+          <h3 class="about-skills__col-title">Kamera<br/>& Schnitt</h3>
+          <ul class="about-skills__list">
+            <li>Videoproduktion &amp; Regie</li>
+            <li>Fotoredaktion &amp; Retusche</li>
+            <li>Color Grading</li>
+            <li>Motion Graphics</li>
+            <li>Social Media Ads</li>
+          </ul>
+        </div>
+        <div class="about-skills__col">
+          <span class="about-skills__col-label">Gestaltung</span>
+          <h3 class="about-skills__col-title">Design<br/>& Layout</h3>
+          <ul class="about-skills__list">
+            <li>Brand &amp; Visual Identity</li>
+            <li>Print &amp; Drucksachen</li>
+            <li>Infografiken</li>
+            <li>UI-Grundlagen</li>
+            <li>Typografie</li>
+          </ul>
+        </div>
+        <div class="about-skills__col">
+          <span class="about-skills__col-label">Konzept & Digital</span>
+          <h3 class="about-skills__col-title">Content<br/>& Strategie</h3>
+          <ul class="about-skills__list">
+            <li>Content-Konzepte</li>
+            <li>Social Media Strategie</li>
+            <li>Storytelling</li>
+            <li>Redaktionsplanung</li>
+            <li>Kampagnenstrategie</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="about-timeline">
+      <div class="section-head">
+        <span class="section-head__num">03</span>
+        <span class="section-head__label">Mein Weg</span>
+      </div>
+
+      <div class="about-timeline__list">
+        <div class="about-timeline__item">
+          <span class="about-timeline__year">2022 – 2024</span>
+          <div>
+            <div class="about-timeline__role">Lernender Mediamatiker</div>
+            <div class="about-timeline__place">BiCT AG — Ostermundigen</div>
+            <p class="about-timeline__desc">
+              2022 startete ich meine Lehre bei der BiCT AG. Dort erlente ich die Basics zum Mediamatiker. 
+              Durch die Skills der Coaches konnte ich viel Erfahrung sammeln und bereits einige eigenständige Projekte umsetzen. 
+            </p>
+          </div>
+        </div>
+        <div class="about-timeline__item">
+          <span class="about-timeline__year">2024 – 2026</span>
+          <div>
+            <div class="about-timeline__role">Lernender Mediamatiker</div>
+            <div class="about-timeline__place">Bundesamt für Energie BAFU — Ittigen</div>
+            <p class="about-timeline__desc">
+              Video, Fotografie und Kommunikationsprojekte für eine Bundesbehörde —
+              von Eventdokumentationen bis zu internen Kampagnen.
+            </p>
+          </div>
+        </div>
+        <div class="about-timeline__item">
+          <span class="about-timeline__year">Ab 2026 ...</span>
+          <div>
+            <div class="about-timeline__role">Selbständig</div>
+            <div class="about-timeline__place">Studio Wankdorf — Bern</div>
+            <p class="about-timeline__desc">
+              Einstieg in die Selbständigkeit mit eigenem Studio im Wankdorf.
+              Visuelle Kommunikation, Videoproduktion und kreative Projekte für Marken und Einzelpersonen.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="about-values">
+      <div class="section-head">
+        <span class="section-head__num">04</span>
+        <span class="section-head__label">Wofür ich stehe</span>
+      </div>
+
+      <div class="about-values__grid">
+        <div class="about-values__card">
+          <span class="about-values__num">01</span>
+          <h3>Klarheit</h3>
+          <p>Ich mag kein unnötiges Rauschen. Jedes Element muss einen Grund haben — in der Komposition, im Schnitt, im Text.</p>
+        </div>
+        <div class="about-values__card">
+          <span class="about-values__num">02</span>
+          <h3>Handwerk</h3>
+          <p>Gutes Ergebnis entsteht nicht durch Zufall. Ich investiere in die Details, die man auf den ersten Blick nicht sieht, die man aber spürt.</p>
+        </div>
+        <div class="about-values__card">
+          <span class="about-values__num">03</span>
+          <h3>Neugier</h3>
+          <p>Jedes Projekt ist eine Chance, etwas Neues zu lernen. Ich bringe Referenzen mit, höre zu und denke über den Tellerrand hinaus.</p>
+        </div>
+        <div class="about-values__card">
+          <span class="about-values__num">04</span>
+          <h3>Wirkung</h3>
+          <p>Design das niemanden bewegt, hat seinen Job nicht gemacht. Ich arbeite so lange, bis das Ergebnis tatsächlich etwas auslöst.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Back CTA -->
+    <section class="about-cta">
+      <span class="about-cta__label">Bereit für ein Projekt?</span>
+      <a href="index.html#contact" class="about-cta__link" data-magnetic>Kontakt aufnehmen</a>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <span>© 2026 — James</span>
+        <div class="footer__links">
+          <a href="https://www.instagram.com/pocher.gallery/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.linkedin.com/in/james-pocher-4ab650340/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <span>Made with care</span>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="projects-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

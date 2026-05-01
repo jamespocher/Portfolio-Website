@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>James — Portfolio</title>
+<meta name="description" content="Design, Video und digitale Konzepte für starke Marken." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700;1,800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__row">
+      <span class="preloader__label">Welcome</span>
+      <span class="preloader__count" id="preloaderCount">0</span>
+    </div>
+    <div class="preloader__bar"><span id="preloaderBar"></span></div>
+  </div>
+
+  <!-- Grain overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Scroll progress -->
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"><span class="cursor__label">Ansehen</span></div>
+
+  <!-- Header / Navigation -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="#top" class="logo" aria-label="Startseite">
+        <img src="fotos/JamesPocher_Wortmarke.png" alt="James Pocher" class="logo__mark" />
+        <span class="logo__meta">Mediamatiker<br/>© 2026</span>
+      </a>
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a href="#work"><span class="nav__num">01</span>Work</a>
+        <a href="#services"><span class="nav__num">02</span>Services</a>
+        <a href="about.html"><span class="nav__num">03</span>About</a>
+        <a href="#contact"><span class="nav__num">04</span>Contact</a>
+      </nav>
+      <div class="header__right">
+        <span class="clock" id="clock">CH —:—</span>
+        <button class="theme-toggle" id="themeToggle" aria-label="Theme wechseln">
+          <span class="theme-toggle__icon">◑</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Navigation öffnen" aria-expanded="false">
+          <span class="menu-toggle__text">Menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <div class="mobile-nav__inner">
+      <nav class="mobile-nav__list">
+        <a href="#work" class="mobile-nav__item">
+          <span class="mobile-nav__num">01</span>
+          <span class="mobile-nav__label">Work</span>
+        </a>
+        <a href="#services" class="mobile-nav__item">
+          <span class="mobile-nav__num">02</span>
+          <span class="mobile-nav__label">Services</span>
+        </a>
+        <a href="about.html" class="mobile-nav__item">
+          <span class="mobile-nav__num">03</span>
+          <span class="mobile-nav__label">About</span>
+        </a>
+        <a href="#contact" class="mobile-nav__item">
+          <span class="mobile-nav__num">04</span>
+          <span class="mobile-nav__label">Contact</span>
+        </a>
+      </nav>
+      <div class="mobile-nav__footer">
+        <span>© 2026 James</span>
+        <span>Switzerland</span>
+      </div>
+    </div>
+  </div>
+
+  <main id="top">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero__inner">
+        <div class="hero__meta">
+          <span>Portfolio — 2026</span>
+          <span>Based in Switzerland</span>
+        </div>
+
+        <h1 class="hero__title">
+          <span class="reveal"><span>Ich gestalte</span></span>
+          <span class="reveal"><span>visuelle <em>Erlebnisse.</em></span></span>
+        </h1>
+
+        <p class="hero__sub reveal-fade">
+          Video, Fotografie und digitale Konzepte für starke Marken.
+        </p>
+
+        <a href="#work" class="hero__cta reveal-fade" data-magnetic>
+          <span class="hero__cta-inner">
+            <span>Projekte ansehen</span>
+            <svg width="24" height="12" viewBox="0 0 24 12" fill="none" aria-hidden="true">
+              <path d="M1 6h22m0 0L18 1m5 5l-5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="square"/>
+            </svg>
+          </span>
+        </a>
+
+        <div class="hero__stats reveal-fade">
+          <div>
+            <span class="hero__stats-num" data-count="40+">0</span>
+            <span class="hero__stats-label">Projects delivered</span>
+          </div>
+          <div>
+            <span class="hero__stats-num" data-count="4">0</span>
+            <span class="hero__stats-label">Years in craft</span>
+          </div>
+          <div>
+            <span class="hero__stats-num" data-count="10">0</span>
+            <span class="hero__stats-label">Happy clients</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Marquee -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>Art Direction</span><span>•</span>
+          <span>Video Production</span><span>•</span>
+          <span>Photography</span><span>•</span>
+          <span>Storytelling</span><span>•</span>
+          <span>Good Vibes</span><span>•</span>
+          <span>Art Direction</span><span>•</span>
+          <span>Video Production</span><span>•</span>
+          <span>Photography</span><span>•</span>
+          <span>Storytelling</span><span>•</span>
+          <span>Good Vibes</span><span>•</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section class="work" id="work">
+      <div class="section-head">
+        <span class="section-head__num">01</span>
+        <span class="section-head__label">Selected Work</span>
+      </div>
+
+      <div class="pgrid">
+
+        <a href="sweet-2024.html" class="pgrid__tile" data-cursor="hover" aria-label="SWEET-Konferenz 2024 ansehen">
+          <div class="pgrid__media">
+            <img src="fotos/SWEET/SWEET2024_15.jpg" alt="SWEET-Konferenz 2024" loading="lazy" style="object-position: 50% 30%;">
+          </div>
+          <div class="pgrid__overlay">
+            <div class="pgrid__info">
+              <span class="pgrid__cat">2024 — Fotografie</span>
+              <h3 class="pgrid__title">SWEET-Konferenz 2024</h3>
+            </div>
+          </div>
+        </a>
+
+        <a href="sergio.html" class="pgrid__tile" data-cursor="hover" aria-label="Sergio Portrait ansehen">
+          <div class="pgrid__media">
+            <img src="fotos/Sergio/Photoshoot_Fenster-12.jpg" alt="Sergio Portrait" loading="lazy" style="object-position: 50% 20%;">
+          </div>
+          <div class="pgrid__overlay">
+            <div class="pgrid__info">
+              <span class="pgrid__cat">2025 — Fotografie</span>
+              <h3 class="pgrid__title">Sergio — Portrait</h3>
+            </div>
+          </div>
+        </a>
+
+        <a href="podcast.html" class="pgrid__tile" data-cursor="hover" aria-label="Podcast Visual Identity ansehen">
+          <div class="pgrid__media">
+            <img src="grafiken/Podcast_Cover_final.jpg" alt="Podcast Visual Identity" loading="lazy">
+          </div>
+          <div class="pgrid__overlay">
+            <div class="pgrid__info">
+              <span class="pgrid__cat">2025 — Grafik</span>
+              <h3 class="pgrid__title">Podcast Visual Identity</h3>
+            </div>
+          </div>
+        </a>
+
+        <a href="energie-club-schweiz.html" class="pgrid__tile" data-cursor="hover" aria-label="Podcast Teaser ansehen">
+          <div class="pgrid__media">
+            <video src="videos/Audioteaser_Industrieunternehmen_final.mp4" muted autoplay loop playsinline></video>
+          </div>
+          <div class="pgrid__overlay">
+            <div class="pgrid__info">
+              <span class="pgrid__cat">2025 — Video</span>
+              <h3 class="pgrid__title">Podcast Teaser</h3>
+            </div>
+          </div>
+        </a>
+
+        <a href="ipa-2026.html" class="pgrid__tile" data-cursor="hover" aria-label="IPA 2026 ansehen">
+          <div class="pgrid__media">
+            <video src="videos/Willkommensvideo_IPA2026_final.mp4" muted autoplay loop playsinline></video>
+          </div>
+          <div class="pgrid__overlay">
+            <div class="pgrid__info">
+              <span class="pgrid__cat">2026 — Video</span>
+              <h3 class="pgrid__title">IPA 2026 — Willkommen</h3>
+            </div>
+          </div>
+        </a>
+
+        <a href="digitaloffice.html" class="pgrid__tile" data-cursor="hover" aria-label="DigitalOffice Teaser ansehen">
+          <div class="pgrid__media">
+            <video src="videos/Videoteaser_DigitalOffice.mp4" muted autoplay loop playsinline></video>
+          </div>
+          <div class="pgrid__overlay">
+            <div class="pgrid__info">
+              <span class="pgrid__cat">2025 — Video</span>
+              <h3 class="pgrid__title">DigitalOffice Teaser</h3>
+            </div>
+          </div>
+        </a>
+
+        <a href="peik-dylan.html" class="pgrid__tile" data-cursor="hover" aria-label="Fachspezialisten auf LinkedIn ansehen">
+          <div class="pgrid__media">
+            <video src="videos/Linkedin_PEIK_Dylan.mp4" muted autoplay loop playsinline></video>
+          </div>
+          <div class="pgrid__overlay">
+            <div class="pgrid__info">
+              <span class="pgrid__cat">2025 — Video</span>
+              <h3 class="pgrid__title">Fachspezialisten auf LinkedIn</h3>
+            </div>
+          </div>
+        </a>
+
+        <a href="concorso-eleganza.html" class="pgrid__tile" data-cursor="hover" aria-label="Concorso d'Eleganza ansehen">
+          <div class="pgrid__media">
+            <img src="fotos/ConcorsoEleganza/Porsche_Felge.png" alt="Concorso d'Eleganza" loading="lazy" style="object-position: 50% 50%;">
+          </div>
+          <div class="pgrid__overlay">
+            <div class="pgrid__info">
+              <span class="pgrid__cat">2025 — Fotografie</span>
+              <h3 class="pgrid__title">Concorso d'Eleganza</h3>
+            </div>
+          </div>
+        </a>
+
+        <a href="spaeti-holzbau.html" class="pgrid__tile" data-cursor="hover" aria-label="Späti Holzbau AG ansehen">
+          <div class="pgrid__media">
+            <video src="videos/Zimmermann_1.mov" muted autoplay loop playsinline></video>
+          </div>
+          <div class="pgrid__overlay">
+            <div class="pgrid__info">
+              <span class="pgrid__cat">2024 — Social Media Ads</span>
+              <h3 class="pgrid__title">Späti Holzbau AG</h3>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+      <div class="section-head">
+        <span class="section-head__num">02</span>
+        <span class="section-head__label">Services</span>
+      </div>
+
+      <div class="services__mega" id="servicesMega">
+
+        <a href="#work" class="services__mega-item">
+          <span class="services__mega-num">01</span>
+          <span class="services__mega-title">Art Direction</span>
+          <span class="services__mega-tag">Branding · Identity</span>
+        </a>
+
+        <a href="#work" class="services__mega-item">
+          <span class="services__mega-num">02</span>
+          <span class="services__mega-title">Video Production</span>
+          <span class="services__mega-tag">Motion · Film</span>
+        </a>
+
+        <a href="#work" class="services__mega-item">
+          <span class="services__mega-num">03</span>
+          <span class="services__mega-title">Photography</span>
+          <span class="services__mega-tag">Portrait · Editorial</span>
+        </a>
+
+        <a href="#work" class="services__mega-item">
+          <span class="services__mega-num">04</span>
+          <span class="services__mega-title">Graphic and Layout</span>
+          <span class="services__mega-tag">brochures · Infographic</span>
+        </a>
+
+        <a href="#work" class="services__mega-item">
+          <span class="services__mega-num">05</span>
+          <span class="services__mega-title">Content Strategy</span>
+          <span class="services__mega-tag">Social · Concept</span>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="process">
+      <div class="section-head">
+        <span class="section-head__num">—</span>
+        <span class="section-head__label">How it works</span>
+      </div>
+
+      <div class="process__grid">
+        <div class="process__step">
+          <span class="process__step-num">01</span>
+          <h3>Discover</h3>
+          <p>Wir sprechen über Marke, Ziel und Stimmung. Ich höre zu, stelle die richtigen Fragen und sammle Referenzen.</p>
+        </div>
+        <div class="process__step">
+          <span class="process__step-num">02</span>
+          <h3>Design</h3>
+          <p>Konzept, Moodboards, Iteration. Ich zeige Richtungen und wir schärfen gemeinsam den finalen Look.</p>
+        </div>
+        <div class="process__step">
+          <span class="process__step-num">03</span>
+          <h3>Deliver</h3>
+          <p>Produktion, Feinschliff, Launch. Alle Assets sauber exportiert, dokumentiert und bereit für den Einsatz.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+      <div class="section-head">
+        <span class="section-head__num">03</span>
+        <span class="section-head__label">About</span>
+      </div>
+
+      <div class="about__grid">
+        <div class="about__left">
+          <h2 class="about__title">Über<br/>mich.</h2>
+        </div>
+        <div class="about__right">
+          <p class="about__lead">
+            Ich bin James Pocher — Mediamatiker, Gestalter und Geschichtenerzähler aus Thun.
+            Visuelle Kommunikation ist für mich mehr als Handwerk: es ist der Antrieb, Marken eine Stimme zu geben.
+          </p>
+          <p class="about__text">
+            Was mich motiviert, welche Werkzeuge ich beherrsche und wie mein Weg hierher verlief —
+            das alles findest du auf meiner About-Seite.
+          </p>
+
+          <div class="about__facts">
+            <div>
+              <span class="about__facts-label">Focus</span>
+              <span class="about__facts-value">Brand, Video, Web</span>
+            </div>
+            <div>
+              <span class="about__facts-label">Based</span>
+              <span class="about__facts-value">Switzerland</span>
+            </div>
+            <div>
+              <span class="about__facts-label">Since</span>
+              <span class="about__facts-value">2020</span>
+            </div>
+          </div>
+
+          <a href="about.html" class="about-btn">
+            <span class="about-btn__default">Mehr lesen...</span>
+            <span class="about-btn__hover">Über mich</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+      <div class="section-head">
+        <span class="section-head__num">04</span>
+        <span class="section-head__label">Contact</span>
+      </div>
+
+      <div class="contact__inner">
+        <p class="contact__sub">Bereit für ein Projekt?</p>
+        <a href="mailto:hello@deinemail.ch" class="contact__mail" data-magnetic>
+          <span class="contact__mail-inner">jamespocher@gmail.com</span>
+        </a>
+
+        <div class="contact__links">
+          <a href="https://www.instagram.com/pocher.gallery/" target="_blank" rel="noopener" class="contact__link"><span>Instagram</span><span>↗</span></a>
+          <a href="https://www.linkedin.com/in/james-pocher-4ab650340/" target="_blank" rel="noopener" class="contact__link"><span>LinkedIn</span><span>↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <span>© 2026 — James</span>
+        <div class="footer__links">
+          <a href="https://www.instagram.com/pocher.gallery/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.linkedin.com/in/james-pocher-4ab650340/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <span>Made with care</span>
+      </div>
+    </footer>
+
+  </main>
+
+
+  <script src="projects-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

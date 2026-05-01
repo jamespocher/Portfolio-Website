@@ -1,0 +1,6 @@
+.DS_Store
+Thumbs.db
+*.log
+
+# Videos werden separat auf den Server kopiert
+videos/

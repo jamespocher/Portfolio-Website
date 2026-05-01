@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fachspezialisten auf LinkedIn — James Pocher</title>
+<meta name="description" content="Professionelles LinkedIn-Videoformat für Dylan — authentisch, prägnant und auf die Plattform abgestimmt." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700;1,800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body data-project-id="peik-dylan">
+  <div class="grain" aria-hidden="true"></div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <div class="cursor" id="cursor"><span class="cursor__label">Ansehen</span></div>
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html" class="logo" aria-label="Startseite"><img src="fotos/JamesPocher_Wortmarke.png" alt="James Pocher" class="logo__mark" /><span class="logo__meta">Mediamatiker<br/>© 2026</span></a>
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a href="index.html#work"><span class="nav__num">01</span>Work</a>
+        <a href="index.html#services"><span class="nav__num">02</span>Services</a>
+        <a href="index.html#about"><span class="nav__num">03</span>About</a>
+        <a href="index.html#contact"><span class="nav__num">04</span>Contact</a>
+      </nav>
+      <div class="header__right">
+        <span class="clock" id="clock">CH —:—</span>
+        <button class="theme-toggle" id="themeToggle" aria-label="Theme wechseln"><span class="theme-toggle__icon">◑</span></button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Navigation öffnen" aria-expanded="false"><span class="menu-toggle__text">Menu</span></button>
+      </div>
+    </div>
+  </header>
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <div class="mobile-nav__inner">
+      <nav class="mobile-nav__list">
+        <a href="index.html#work" class="mobile-nav__item"><span class="mobile-nav__num">01</span><span class="mobile-nav__label">Work</span></a>
+        <a href="index.html#services" class="mobile-nav__item"><span class="mobile-nav__num">02</span><span class="mobile-nav__label">Services</span></a>
+        <a href="index.html#about" class="mobile-nav__item"><span class="mobile-nav__num">03</span><span class="mobile-nav__label">About</span></a>
+        <a href="index.html#contact" class="mobile-nav__item"><span class="mobile-nav__num">04</span><span class="mobile-nav__label">Contact</span></a>
+      </nav>
+      <div class="mobile-nav__footer"><span>© 2026 James</span><span>Switzerland</span></div>
+    </div>
+  </div>
+  <main>
+    <section class="proj-hero">
+      <div class="container">
+        <div class="proj-hero__head">
+          <a href="index.html#work" class="proj-hero__back">← Alle Projekte</a>
+          <span>2025</span><span>Video</span>
+        </div>
+        <h1 class="proj-hero__title">Fachspezialisten<br/>auf LinkedIn</h1>
+        <p class="proj-hero__desc">Professionelles LinkedIn-Videoformat für Dylan aus dem PEIK-Programm: authentisch, prägnant und auf die Plattform abgestimmt. Ein persönliches Vorstellungsformat, das im Feed auffällt, in Erinnerung bleibt und echte Verbindungen schafft.</p>
+        <div class="proj-hero__meta">
+          <div class="proj-hero__meta-item"><span class="proj-hero__meta-label">Jahr</span><span class="proj-hero__meta-val">2025</span></div>
+          <div class="proj-hero__meta-item"><span class="proj-hero__meta-label">Kategorie</span><span class="proj-hero__meta-val">Video</span></div>
+          <div class="proj-hero__meta-item"><span class="proj-hero__meta-label">Umfang</span><span class="proj-hero__meta-val">Social Media Video</span></div>
+          <div class="proj-hero__meta-item"><span class="proj-hero__meta-label">Format</span><span class="proj-hero__meta-val">Vertical HD</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="proj-gallery">
+      <div class="container">
+        <div class="proj-video-wrap">
+          <video controls style="object-fit: contain;">
+            <source src="videos/Linkedin_PEIK_Dylan.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </section>
+    <section class="proj-related" id="proj-related">
+      <div class="container">
+        <div class="proj-related__head">
+          <div><span class="proj-related__label">Mehr entdecken</span><h2 class="proj-related__title">Weitere Projekte</h2></div>
+          <div class="proj-related__nav">
+            <button class="proj-related__btn proj-related__btn--prev" aria-label="Zurück">←</button>
+            <button class="proj-related__btn proj-related__btn--next" aria-label="Weiter">→</button>
+          </div>
+        </div>
+        <div class="proj-related__track-wrap"><div class="proj-related__track"></div></div>
+      </div>
+    </section>
+    <footer class="footer"><div class="footer__inner"><span>© 2026 — James</span><div class="footer__links"><a href="https://www.instagram.com/pocher.gallery/" target="_blank" rel="noopener">Instagram</a><a href="https://www.linkedin.com/in/james-pocher-4ab650340/" target="_blank" rel="noopener">LinkedIn</a></div><span>Made with care</span></div></footer>
+  </main>
+  <script src="projects-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
