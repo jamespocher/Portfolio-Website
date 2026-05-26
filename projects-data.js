@@ -32,8 +32,8 @@ window.PROJECTS = [
     year: '2025',
     cat: 'Video',
     href: 'energie-club-schweiz.html',
-    thumb: 'videos/Audioteaser_Industrieunternehmen_final.mp4',
-    thumbType: 'video'
+    thumb: 'https://img.youtube.com/vi/kOQycoFaBKk/maxresdefault.jpg',
+    thumbType: 'img'
   },
   {
     id: 'podcast',
@@ -50,8 +50,8 @@ window.PROJECTS = [
     year: '2026',
     cat: 'Video',
     href: 'ipa-2026.html',
-    thumb: 'videos/Willkommensvideo_IPA2026_final.mp4',
-    thumbType: 'video'
+    thumb: 'https://img.youtube.com/vi/aMohOq76y3g/maxresdefault.jpg',
+    thumbType: 'img'
   },
   {
     id: 'peik-dylan',
@@ -59,8 +59,8 @@ window.PROJECTS = [
     year: '2024',
     cat: 'Video',
     href: 'peik-dylan.html',
-    thumb: 'videos/Linkedin_PEIK_Dylan.mp4',
-    thumbType: 'video'
+    thumb: 'https://img.youtube.com/vi/tD5o1LsjJjk/maxresdefault.jpg',
+    thumbType: 'img'
   },
   {
     id: 'concorso-eleganza',
@@ -77,8 +77,8 @@ window.PROJECTS = [
     year: '2024',
     cat: 'Social Media Ads',
     href: 'spaeti-holzbau.html',
-    thumb: 'videos/Zimmermann_1.mov',
-    thumbType: 'video'
+    thumb: 'https://img.youtube.com/vi/TAQlJGMqtNk/maxresdefault.jpg',
+    thumbType: 'img'
   },
   {
     id: 'digitaloffice',
@@ -86,8 +86,8 @@ window.PROJECTS = [
     year: '2025',
     cat: 'Video',
     href: 'digitaloffice.html',
-    thumb: 'videos/Videoteaser_DigitalOffice.mp4',
-    thumbType: 'video'
+    thumb: 'https://img.youtube.com/vi/506WCZqi21U/maxresdefault.jpg',
+    thumbType: 'img'
   },
   {
     id: 'schnuppertag-ict',
@@ -95,8 +95,8 @@ window.PROJECTS = [
     year: '2025',
     cat: 'Video',
     href: 'schnuppertag-ict.html',
-    thumb: 'videos/Schnuppertagvideo_ICT_final.mp4',
-    thumbType: 'video'
+    thumb: 'https://img.youtube.com/vi/h9E3RxHssFY/maxresdefault.jpg',
+    thumbType: 'img'
   },
   {
     id: 'bewerbungsvideo',
@@ -104,8 +104,8 @@ window.PROJECTS = [
     year: '2025',
     cat: 'Video',
     href: 'bewerbungsvideo.html',
-    thumb: 'videos/Internes-Bewerbungsvideo_Kurzvideos_REC709.mp4',
-    thumbType: 'video'
+    thumb: 'https://img.youtube.com/vi/Cdc0LKkWGzE/maxresdefault.jpg',
+    thumbType: 'img'
   },
   {
     id: 'samil',
@@ -113,8 +113,8 @@ window.PROJECTS = [
     year: '2025',
     cat: 'Video',
     href: 'samil.html',
-    thumb: 'videos/Samil_Video-Final.mov',
-    thumbType: 'video'
+    thumb: 'https://img.youtube.com/vi/HYohliJjuzo/maxresdefault.jpg',
+    thumbType: 'img'
   },
   {
     id: 'vorstellungsvideo-pu',
@@ -122,7 +122,7 @@ window.PROJECTS = [
     year: '2025',
     cat: 'Video',
     href: 'vorstellungsvideo-pu.html',
-    thumb: 'videos/Vorstellungsvideo_PU.mov',
-    thumbType: 'video'
+    thumb: 'https://img.youtube.com/vi/KFPFbZor3rs/maxresdefault.jpg',
+    thumbType: 'img'
   }
 ];
