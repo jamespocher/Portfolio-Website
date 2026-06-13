@@ -1,5 +1,14 @@
 window.PROJECTS = [
   {
+    id: 'cap-promotion-casa-del-arte',
+    title: 'Cap Promotion — Casa del Arte',
+    year: '2026',
+    cat: 'Social Media Ads',
+    href: 'cap-promotion-casa-del-arte.html',
+    thumb: 'https://img.youtube.com/vi/MqKFq6Xy42w/maxresdefault.jpg',
+    thumbType: 'img'
+  },
+  {
     id: 'sweet-2024',
     title: 'SWEET-Konferenz 2024',
     year: '2024',
