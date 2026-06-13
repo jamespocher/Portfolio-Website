@@ -116,13 +116,4 @@ window.PROJECTS = [
     thumb: 'https://img.youtube.com/vi/HYohliJjuzo/maxresdefault.jpg',
     thumbType: 'img'
   },
-  {
-    id: 'vorstellungsvideo-pu',
-    title: 'Vorstellungsvideo PU',
-    year: '2025',
-    cat: 'Video',
-    href: 'vorstellungsvideo-pu.html',
-    thumb: 'https://img.youtube.com/vi/KFPFbZor3rs/maxresdefault.jpg',
-    thumbType: 'img'
-  }
 ];
