@@ -27,6 +27,24 @@ window.PROJECTS = [
     thumbType: 'img'
   },
   {
+    id: 'shooting-moses',
+    title: 'Shooting Moses',
+    year: '2026',
+    cat: 'Fotografie',
+    href: 'shooting-moses.html',
+    thumb: 'fotos/Moses/shooting-moses-341-4.jpg',
+    thumbType: 'img'
+  },
+  {
+    id: 'sergio-studio',
+    title: 'Sergio — Studio Shoot',
+    year: '2026',
+    cat: 'Fotografie',
+    href: 'sergio-studio.html',
+    thumb: 'fotos/SergioStudio/Favorit_2.jpg',
+    thumbType: 'img'
+  },
+  {
     id: 'einfuehrungswoche',
     title: 'Einführungswoche',
     year: '2025',
